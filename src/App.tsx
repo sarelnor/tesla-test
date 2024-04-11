@@ -34,7 +34,7 @@ function App() {
                         </Nav>
                         <Nav>
                             <Link id="Nav.Link" to={'/'}>
-                                Startsidan
+                                Home
                             </Link>
                             <Link id="Nav.Link" to={'/about'}>
                                 About

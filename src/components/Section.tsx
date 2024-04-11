@@ -83,6 +83,7 @@ const LeftButton = styled.div`
   margin: 8px;
 `;
 
+//importerar styling från högra knappen som ett argument 
 const RightButton = styled(LeftButton)`
   background-color: rgba(244, 244, 244, 1);
   color: black;
