@@ -71,9 +71,9 @@ const ButtonGroup = styled.div`
 `;
 
 const LeftButton = styled.div`
-  background-color: rgba(23, 26, 32, 0.8);
+  background-color: rgba(244, 244, 244, 1);
   align-items: center;
-  color: white;
+  color: black;
   text-align: center;
   padding: 10px 80px;
   border-radius: 5px;
@@ -85,8 +85,8 @@ const LeftButton = styled.div`
 
 //importerar styling från högra knappen som ett argument 
 const RightButton = styled(LeftButton)`
-  background-color: rgba(244, 244, 244, 1);
-  color: black;
+  background-color: rgba(23, 26, 32, 0.8);
+  color: white;
 `;
 
 const DownArrow = styled.div`
