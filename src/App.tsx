@@ -6,8 +6,11 @@ import Navbar from "react-bootstrap/Navbar";
 import { Link, Routes, Route } from "react-router-dom";
 import Home from "./pages/Home";
 import About from "./pages/About";
+import { useCarContext } from "./context/CarContext";
 
 function App() {
+  const { cars } = useCarContext();
+
   return (
     <>
       <div className="App">
@@ -24,6 +27,12 @@ function App() {
             <Navbar.Collapse id="responsive-navbar-nav">
               <Nav id="Nav.Link" className="me-auto">
                 {/* Här kommer vi sedan att hämta kontext */}
+                {cars &&
+                  cars.map((car: string, index: number) => (
+                    <li key={index}>
+                      <Link to={"/"}>{car}</Link>
+                    </li>
+                  ))}
               </Nav>
               <Nav>
                 <Link id="Nav.Link" to={"/"}>
@@ -38,8 +47,8 @@ function App() {
         </Navbar>
         {/* Lägger in routes från react-router-dom med react-bootstrap */}
         <Routes>
-          <Route path='/' element={<Home/>} />
-          <Route path='/about' element={<About/>} />          
+          <Route path="/" element={<Home />} />
+          <Route path="/about" element={<About />} />
         </Routes>
       </div>
     </>
